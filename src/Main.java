@@ -53,15 +53,38 @@ public class Main {
     }
 
     public static void ejercicio4(){
-
+        double precioExacto = 49.99f;
+        int precioEntero = (int) precioExacto;
+        char letra = 'p';
+        System.out.println("En código Astrcii: " + (int)letra)
     }
 
     public static void ejercicio5(){
+        int segundos = 3722;
+        int minutos = segundos/60;
+        int segundos_restantes = segundos%60;
+        int horas = minutos/60;
+        int minutos_restantes = minutos%60;
+        System.out.println("")
+        System.out.print( segundos + " son: " + horas + " horas, " + minutos_restantes + " minutos, " + segundos_restantes + " segundos" )
 
     }
 
     public static void ejercicio6(){
-
+        boolean bist_year = (year%400 == 0);
+        int year = 1465;
+        //Solo se usa en booleanos
+        System.out.print(bist_year ? "Opcion1" : "Opcion2")
+        
+        if (year%4 == 0 && year%100 != 0 || year%400 == 0)
+        {
+            System.out.print("El anio es bisiesto");
+        }
+        else
+        {
+            System.out.print("El anio NO bisiesto");
+        }
+        
     }
 
     public static void ejercicio7(){
