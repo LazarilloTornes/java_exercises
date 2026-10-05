@@ -5,6 +5,7 @@ public class Prog_mod1 {
     }
     public static void ej1_variables(){
         int ID = 2;
+        int stock = 200;
         char letra = 'a';
         float precio = 21.3f;
         boolean rebajado = false;
