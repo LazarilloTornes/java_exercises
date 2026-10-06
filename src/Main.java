@@ -104,7 +104,7 @@ public class Main {
     
 
     public static void ejercicio8(){
-     System.out.println("MENÚ DE OPCIONES:\n1.\tArchivo \"Nuevo\"\n2.\tRuta: C:\\Archivos\\Java\n3.\tSalir");
+     System.out.println("MENÚ DE OPCIONES:\n1.\tArchivo \"Nuevo\"\n2.\tRuta: C:\\\\Archivos\\\\Java\n3.\tSalir");
     }
 
     public static void ejercicio9(){
