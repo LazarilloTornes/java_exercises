@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String args[]) {
         ejercicio1();
@@ -88,15 +89,35 @@ public class Main {
     }
 
     public static void ejercicio7(){
-
+    //El formato se edita básicamente con:
+        /*
+        %-> empieza el formato
+        con - o sin -; el guión solo marca que es a la izquierda
+        el número son los espacios que quieres dejar
+        la letra es el tipo de contenido que va a tener
+        para los decimales, en el número de espacio tienes que poner un ".X" con el
+        número de decimales que quieras
+         */
+        System.out.printf("%-15s %5s %8s%n", "Nombre", "Unidades", "Precio");
+        System.out.printf("%-15s %5d %8.2f%n","Pollo",400,35.87);
     }
+    
 
     public static void ejercicio8(){
-
+     System.out.println("MENÚ DE OPCIONES:\n1.\tArchivo \"Nuevo\"\n2.\tRuta: C:\\Archivos\\Java\n3.\tSalir");
     }
 
     public static void ejercicio9(){
-
+        Scanner scanner = new Scanner(System.in);
+        int edad = 0;
+        System.out.println("Introduzca su edad por favor: ");
+        edad = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Introduzca el nombre: ");
+        String nombre = scanner.nextLine();
+        System.out.println("Bienvenido " + nombre + " tienes " + edad + " años, enhorabuena");
+        scanner.close();
+    }
     }
 
     public static void ejercicio10(){
