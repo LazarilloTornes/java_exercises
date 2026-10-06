@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String args[]) {
+        Scanner scanner = new Scanner(System.in);
         ejercicio1();
         ejercicio2();
         ejercicio3();
@@ -11,6 +12,10 @@ public class Main {
         ejercicio8();
         ejercicio9();
         ejercicio10();
+        ejercicio11();
+        ejercicio12();
+        ejercicio13();
+        ejercicio14();
     }
 
     
@@ -71,12 +76,31 @@ public class Main {
 
     }
 
-    public static void ejercicio6(){
+    public static void ejercicio6(Scanner scanner){
         boolean bist_year = (year%400 == 0);
         int year = 1465;
         //Solo se usa en booleanos
-        System.out.print(bist_year ? "Opcion1" : "Opcion2")
-        
+           
+        System.out.print("Introduce un mes de forma numérica: ");
+        int mes = scanner.nextInt();
+        scanner.nextLine();
+            switch (mes) {
+                case 1,3,5,7,8,10,12:
+                     System.out.println("31");
+                    break;
+                case 2:
+                    System.out.print(bist_year ? "28" : "29");
+                    break;
+                case 4,6,9,11:
+                    System.out.println("30");
+                    break;
+    
+                default;
+                     System.out.println("No valido");
+                    
+            scanner.close();
+
+                    
         if (year%4 == 0 && year%100 != 0 || year%400 == 0)
         {
             System.out.print("El anio es bisiesto");
@@ -107,8 +131,8 @@ public class Main {
      System.out.println("MENÚ DE OPCIONES:\n1.\tArchivo \"Nuevo\"\n2.\tRuta: C:\\\\Archivos\\\\Java\n3.\tSalir");
     }
 
-    public static void ejercicio9(){
-        Scanner scanner = new Scanner(System.in);
+    public static void ejercicio9(Scanner scanner){
+        
         int edad = 0;
         System.out.println("Introduzca su edad por favor: ");
         edad = scanner.nextInt();
@@ -120,7 +144,105 @@ public class Main {
     }
     }
 
-    public static void ejercicio10(){
+    public static void ejercicio10(Scanner scanner){
         
+        System.out.println("Introduzca su edad por favor: ");
+        int edad = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Introduzca el ingreso mensual: ");
+        float ingr_men = scanner.nextFloat();
+        if ((edad < 18) || (edad < 25 && ingr_men < 900)){
+            System.out.println("Tienes acceso a la beca");
+        }
+        else{
+            System.out.println("No tienes acceso a la beca");
+        }
+        scanner.close();
     }
+public static void ejercicio11(Scanner scanner);{
+        System.out.println("Introduzca la nota: ");
+        float nota = scanner.nextFloat();
+        scanner.nextLine();
+    if (nota > 10 && nota < 0) {
+      System.out.println("Nota erronea");  
+    }
+    else{
+        switch ((int)nota) {
+            case 0,1,2,3,4:
+                 System.out.println("Insuficiente");
+                break;
+            case 5:
+                System.out.println("Suficiente");
+                break;
+            case 6:
+                System.out.println("Bien");
+                break;
+            case 7,8:
+                System.out.println("Notable");
+                break;
+            case 9,10:
+                System.out.println("Sobresaliente");
+                break;
+            default;
+        }
+        scanner.close();
+    
+}
+public static void ejercicio12();{
+    float temperatura;
+    System.out.prinln(temperatura > 30 ? "Calor" : "Normal");
+}
+public static void ejercicio13(Scanner scanner);{
+    System.out.print("Introduce un dia de forma numérica: ");
+    int dia = scanner.nextInt();
+    scanner.nextLine();
+        switch (dia) {
+            case 1:
+                 System.out.println("Lunes");
+                break;
+            case 2:
+                System.out.println("Martes");
+                break;
+            case 3:
+                System.out.println("Miercoles");
+                break;
+            case 4:
+                System.out.println("Jueves");
+                break;
+            case 5:
+                System.out.println("Viernes");
+                break;
+            case 6:
+                System.out.println("Sabado");
+                break;
+            case 7:
+                System.out.println("Domingo");
+                break;
+            default;
+                 System.out.println("No valido");
+                
+        scanner.close();
+    
+}
+ public static void ejercicio14(Scanner scanner);{
+     System.out.print("Introduce un mes de forma numérica: ");
+    int mes = scanner.nextInt();
+    scanner.nextLine();
+        switch (mes) {
+            case 1,3,5,7,8,10,12:
+                 System.out.println("31");
+                break;
+            case 2:
+                System.out.println("28, si es bisiesto 29");
+                break;
+            case 4,6,9,11:
+                System.out.println("30");
+                break;
+
+            default;
+                 System.out.println("No valido");
+                
+        scanner.close();
+    
+ }
 }
