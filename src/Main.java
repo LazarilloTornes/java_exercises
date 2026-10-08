@@ -16,6 +16,10 @@ public class Main {
         ejercicio12();
         ejercicio13();
         ejercicio14();
+        ejercicio15();
+        ejercicio16();
+        ejercicio17();
+        ejercicio18();
     }
 
     
@@ -245,4 +249,21 @@ public static void ejercicio13(Scanner scanner);{
         scanner.close();
     
  }
+     public static void ejercicio15(Scanner scanner);{
+        int num=100;
+        int intentos = 0;
+        int suma = 0;
+        while (num>0){
+            System.out.print("Introduce un número: ");
+            num =  scanner.nextInt();
+            if (num < 0){
+                break;
+            }
+            suma = suma + num;
+            intentos++;
+        } System.out.print("Suma total: " +  suma + "\nIntentos: " + intentos);
+     }
 }
+    
+
+    
