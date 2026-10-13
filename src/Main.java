@@ -20,6 +20,12 @@ public class Main {
         ejercicio16();
         ejercicio17();
         ejercicio18();
+        ejercicio19();
+        ejercicio20();
+        ejercicio21();
+        ejercicio22();
+        ejercicio23();
+        ejercicio24();
     }
 
     
@@ -263,6 +269,35 @@ public static void ejercicio13(Scanner scanner);{
             intentos++;
         } System.out.print("Suma total: " +  suma + "\nIntentos: " + intentos);
      }
+      public static void ejercicio16(Scanner scanner); {
+         do{
+            System.out.print("Introduce un número: ");   
+              int num1 = scanner.nextInt();
+            System.out.print("Introduce otro número: ");    
+              int num2 = scanner.nextInt();
+            System.out.println("1. Sumar");
+            System.out.println("2. Restar");
+            System.out.println("3. Multiplicar");
+            System.out.println("4. Salir");    
+          
+            System.out.print("Introduce la operación deseada: ");   
+              int op = scanner.nextInt();
+              switch (op) {
+                case 1:
+                     System.out.println("Resultado de la suma: " + (num1 + num2));
+                    break;
+                case 2:
+                    System.out.println("Resultado de la resta: " + (num1 - num2));
+                    break;
+                case 3:
+                    System.out.println("Resultado de la multiplicación: " + (num1 * num2));
+                    break;
+                default;
+                     System.out.println("No valido");
+                
+        scanner.close();
+         } while(op != 4);
+      }
 }
     
 
