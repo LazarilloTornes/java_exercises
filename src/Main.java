@@ -270,33 +270,37 @@ public static void ejercicio13(Scanner scanner);{
         } System.out.print("Suma total: " +  suma + "\nIntentos: " + intentos);
      }
       public static void ejercicio16(Scanner scanner); {
+         int op = 0;
          do{
-            System.out.print("Introduce un número: ");   
-              int num1 = scanner.nextInt();
-            System.out.print("Introduce otro número: ");    
-              int num2 = scanner.nextInt();
             System.out.println("1. Sumar");
             System.out.println("2. Restar");
             System.out.println("3. Multiplicar");
             System.out.println("4. Salir");    
           
             System.out.print("Introduce la operación deseada: ");   
-              int op = scanner.nextInt();
-              switch (op) {
-                case 1:
-                     System.out.println("Resultado de la suma: " + (num1 + num2));
-                    break;
-                case 2:
-                    System.out.println("Resultado de la resta: " + (num1 - num2));
-                    break;
-                case 3:
-                    System.out.println("Resultado de la multiplicación: " + (num1 * num2));
-                    break;
-                default;
-                     System.out.println("No valido");
-                
-        scanner.close();
+            op = scanner.nextInt();
+            
+            System.out.print("Introduce un número: ");   
+              int num1 = scanner.nextInt();
+            System.out.print("Introduce otro número: ");    
+              int num2 = scanner.nextInt();
+
+            switch (op) {
+            case 1:
+                    System.out.println("Resultado de la suma: " + (num1 + num2));
+                break;
+            case 2:
+                System.out.println("Resultado de la resta: " + (num1 - num2));
+                break;
+            case 3:
+                System.out.println("Resultado de la multiplicación: " + (num1 * num2));
+                break;
+            default:
+                    System.out.println("Adios");
+            }   
+
          } while(op != 4);
+        scanner.close();
       }
 }
     
