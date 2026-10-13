@@ -302,6 +302,64 @@ public static void ejercicio13(Scanner scanner);{
          } while(op != 4);
         scanner.close();
       }
+     public static void ejercicio18(Scanner scanner){
+         import java.util.Scanner;
+
+public class ej18 {
+    public static void main(String args[]){
+        System.out.print("Introduce un número: ");   
+        int n = scanner.nextInt();
+        for (int i = 1; i <= n; i++){
+            trng += "* ";
+            System.out.println(trng);
+        }
+        for (int i = 0; i <= n; i++){
+            for (int j = 0; j <= n; j++){
+                System.out.print( " [" + i + "," + j + "] ");
+            }
+            System.out.println(" ");
+        }
+        for (int i = 0; i <= n; i++){
+            for (int j = 0; j <= i; j++){
+                System.out.print( "*");
+            }
+            System.out.println( "");
+        }
+        for (int i = n; i >=0; i--){
+            for (int j = 0; j <= i; j++){
+                System.out.print( "*");
+            }
+            System.out.println( "");
+        }
+        for (int i = 0; i <=n; i++){
+            for (int j = 0; j <=n; j++){
+                if(j<i){
+                    System.out.print( " ");
+                }
+                else{
+                    System.out.print( "*");
+                }  
+            }
+            System.out.println( " ");
+        }
+        
+
+    for (int i = n; i >=0; i--){
+        for (int j = 0; j <= n; j++){
+            if(j<i){
+                System.out.print( " ");
+            }
+            else{
+                System.out.print( "*");
+            }  
+        }
+        System.out.println( "");
+        }
+
+    }
+}
+
+     }
 }
     
 
